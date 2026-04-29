@@ -17,7 +17,16 @@ A robust Cyber-Physical system designed to detect vehicular crashes in real-time
 - **SSD1306** OLED Display (128x64)
 - **95dB Piezo Buzzer**
 - **Tactile Push Button**
+  
+## 🌐 Live Demonstration
 
+You can interact with the project and view real-time data using the links below:
+
+*   **🕹️ Virtual Hardware Simulation:** [Run on Wokwi](https://wokwi.com/projects/456998478501185537)
+    *(Click Play to simulate the ESP32 and MPU6050 logic in your browser)*
+*   **📊 Live Cloud Dashboard:** [View on ThingSpeak](https://thingspeak.mathworks.com/channels/3348704)
+    *(Monitor real-time telemetry graphs for X, Y, Z axis and vehicle speed)*
+    
 ## 💻 Software & Libraries
 - Arduino IDE
 - [UniversalTelegramBot](https://github.com/witnessmenow/Universal-Arduino-Telegram-Bot)

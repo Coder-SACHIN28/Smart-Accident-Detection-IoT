@@ -1,18 +1,33 @@
-# 🚨 Advanced IoT-Based Vehicle Tracking & Smart Accident Detection System
+# Advanced IoT-Based Vehicle Tracking & Smart Accident Detection System
 
-**A cyber-physical "Black Box" solution designed to track vehicle locations and autonomously report severe physical impacts.**
+A robust Cyber-Physical system designed to detect vehicular crashes in real-time and automate emergency response using ESP32, GPS, and multiple cloud APIs.
 
-### 🎯 Overview
-This project is an automated, hardware-driven IoT platform that provides real-time vehicle location tracking. It utilizes an edge-to-cloud architecture to detect high-impact collisions and autonomously dispatch verified, multi-channel emergency alerts to save lives during the critical "golden hour."
+## 🌟 Key Features
+- **Crash Detection:** Uses MPU6050 (Accelerometer + Gyroscope) with intelligent thresholding.
+- **Verification Logic:** 10-second countdown with a loud siren to prevent false alarms.
+- **Multi-Channel SOS:** Sends Telegram text alerts with Google Maps links and triggers an automated VoIP Voice Call.
+- **Reverse Geocoding:** Converts GPS coordinates into human-readable addresses via Nominatim API.
+- **Cloud Telemetry:** Live data logging (Acceleration X, Y, Z and Speed) on ThingSpeak Dashboard.
+- **Indoor Fallback:** Intelligent static coordinate fallback for indoor testing environments.
 
-### 💻 Tech Stack
-* **Hardware:** ESP32 Microcontroller, MPU6050 (6-Axis IMU), NEO-6M GPS Module, SSD1306 OLED, Piezo Buzzer.
-* **Firmware:** C/C++ (Arduino IDE)
-* **Cloud & APIs:** ThingSpeak (Telemetry), Telegram Bot API, CallMeBot (VoIP), Nominatim (Reverse Geocoding).
+## 🛠️ Hardware Stack
+- **ESP32** DevKit V1
+- **MPU6050** IMU Sensor
+- **NEO-6M** GPS Module
+- **SSD1306** OLED Display (128x64)
+- **95dB Piezo Buzzer**
+- **Tactile Push Button**
 
-### ✨ Key Features
-* **Intelligent Crash Detection:** Uses MPU6050 to detect sudden deceleration and rollovers.
-* **10-Second Failsafe Window:** Local OLED and buzzer warning with a manual override button to cancel false alarms.
-* **Multi-Channel SOS:** Automated Telegram text messages (with Google Maps links) and VoIP voice calls.
-* **Reverse Geocoding:** Converts raw GPS coordinates into human-readable street addresses.
-* **Live Telemetry:** Real-time logging of X, Y, and Z-axis orientation data on a ThingSpeak dashboard.
+## 💻 Software & Libraries
+- Arduino IDE
+- [UniversalTelegramBot](https://github.com/witnessmenow/Universal-Arduino-Telegram-Bot)
+- [TinyGPS++](https://github.com/mikalhart/TinyGPSPlus)
+- [Adafruit MPU6050 & SSD1306](https://github.com/adafruit)
+- ThingSpeak API
+- CallMeBot API
+
+## 🛡️ Cyber Security Context
+This project focuses on secure IoT communication protocols, endpoint authorization using API tokens, and ensuring data integrity between edge devices and the cloud.
+
+---
+Developed as part of the ICT Workshop II at Gautam Buddha University.
